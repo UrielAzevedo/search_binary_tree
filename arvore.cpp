@@ -34,3 +34,53 @@ bool arvore::busca(no_dado* atual, int v){
 		busca(atual->direita, v);
 	}
 }
+
+int arvore::niveis(no_dado* nd){
+
+	if (nd == NULL) return 0;
+
+	int nivel_esquerda = niveis(nd->esquerda);
+	int nivel_direita = niveis(nd->direita);
+
+	return std::max(nivel_esquerda, nivel_direita) + 1;
+
+}
+
+void arvore::pre_ordem(no_dado* nd){
+
+	if(nd == NULL) return;
+
+	cout << nd->valor;
+
+	pre_ordem(nd->esquerda);
+	
+	pre_ordem(nd->direita);
+
+}
+
+void arvore::em_ordem(no_dado* nd){
+	
+	if(nd == NULL) return;
+
+	em_ordem(nd->esquerda);
+
+	cout << nd->valor;
+
+	em_ordem(nd->direita);
+
+}
+
+void arvore::pos_ordem(no_dado* nd){
+
+	pos_ordem(nd->esquerda);
+	pos_ordem(nd->direita);
+
+	cout << nd->valor;
+
+}
+
+void arvore::em_nivel(no_dado* nd){
+
+	
+
+}
