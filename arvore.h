@@ -15,5 +15,14 @@ class arvore {
 		void em_ordem(no_dado* nd);
 		void pos_ordem(no_dado* nd);
 		void em_nivel(no_dado* nd);
+		no_dado* min_value(no_dado* nd);
+		no_dado* remove_nodo(no_dado* nd, int valor);
+		int num_nodos(no_dado* nd);
+		no_dado* insere(no_dado* nd, int valor);
+		no_dado* balanciar(no_dado* nd);
 
+	private:
+		int altura(no_dado* nd);
+		no_dado* rotacionar_esquerda(no_dado* nd);
+		no_dado* rotacionar_direita(no_dado* nd);	
 };

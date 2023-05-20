@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <locale.h>
-
+#include <queue>
 using namespace std;
 
 class no_dado {
